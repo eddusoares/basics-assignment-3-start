@@ -1,0 +1,9 @@
+<button
+  class="btn btn-primary"
+  (click)="registerClick($event)"
+>Display Options </button>
+<p *ngIf="toggle">Secret Password = tuna</p>
+<p *ngFor="let item of clicks" 
+[ngStyle]="{ backgroundColor: item >= 5 ? 'blue' : 'transparent'}"
+[ngClass]="{textColor: item>= 5 }"
+>Click number {{item}}</p>
